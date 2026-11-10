@@ -1,0 +1,148 @@
+# ---------------------------------------------------------------------------
+# Stream-Downloader  --  .gitignore
+# .NET 10 (net10.0-windows, win-x64 self-contained) MCP host + Python/PowerShell tests
+# ---------------------------------------------------------------------------
+
+# =====================================================
+# Build output (MSBuild / dotnet publish)
+# =====================================================
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.binlog
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# scripts/Build-Local.ps1 publishes the self-contained exe here
+/artifacts/
+
+# Publish leftovers
+[Pp]ublish/
+*.[Pp]ublish.xml
+*.publishproj
+*.pubxml
+*.pubxml.user
+PublishScripts/
+
+# =====================================================
+# Runtime + test output produced by this repo
+# =====================================================
+# Download target (AdditionalAllowedRoots)
+/downloads/*
+!/downloads/.gitkeep
+
+# scripts/Test-Local.ps1 and tests/*.py write logs, results, evidence photos,
+# job state (may contain paths) and the downloaded videos here
+/test-artifacts/
+
+# Job state store, wherever it lands if StateDirectory is pointed inside the repo
+jobs.json
+jobs.json.tmp
+jobs.json.bak
+owner.lock
+/state/
+
+# Staging folders created per job by the download engine
+.stream-downloader-staging/
+
+# Auto-acquired external tools (AutoAcquireYtDlp / ToolsDirectory)
+/tools/*.exe
+yt-dlp.exe
+ffmpeg.exe
+ffprobe.exe
+
+# Partial / in-flight downloads (yt-dlp, browsers)
+*.part
+*.ytdl
+*.temp
+*.crdownload
+
+# =====================================================
+# Secrets and machine-local configuration  (NEVER COMMIT)
+# =====================================================
+.env
+.env.*
+!.env.example
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+*.local.json
+cookies.txt
+*.cookies
+*.pfx
+*.p12
+*.snk
+*.key
+*.pem
+
+# =====================================================
+# NuGet
+# =====================================================
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+.nuget/
+
+# =====================================================
+# Tests / coverage / benchmarks
+# =====================================================
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+BenchmarkDotNet.Artifacts/
+
+# =====================================================
+# IDE / editor
+# =====================================================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+.idea/
+*.sln.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# =====================================================
+# Diagnostics / crash dumps / profiling
+# =====================================================
+*.dmp
+*.mdmp
+*.dbg
+*.psess
+*.vsp
+*.vspx
+*.sap
+*.VisualState.xml
+StyleCopReport.xml
+
+# =====================================================
+# OS noise
+# =====================================================
+__pycache__/
+[Tt]humbs.db
+[Tt]humbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*~
+*.swp

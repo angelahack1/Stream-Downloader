@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "Stream-Downloader": {
+      "command": "C:\\Development\\XAIHT\\Stream-Downloader\\artifacts\\local\\StreamDownloader.McpHost.exe",
+      "args": [],
+      "env": {},
+      "transport": "stdio",
+      "description": "Stream-Downloader - private one-call video downloader for YouTube and every other site yt-dlp supports. yt-dlp resolves the watch page, FFmpeg merges the separate HD video+audio streams, ffprobe verifies the result, and the file is hashed and moved into place without ever overwriting. Tools: stream_capabilities, stream_download, stream_download_status, stream_download_wait, stream_download_list, stream_download_retry. Give a URL and a destination folder or exact file path; poll stream_download_wait until the job is terminal. Self-contained Windows x64 executable; acquires its own checksum-verified yt-dlp. Author: Angela López Mendoza."
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "owner": "Angela López Mendoza",
+  "channel": "https://www.youtube.com/@angelalopez1461",
+  "about": "Angela's own YouTube videos, downloaded by tests/verify_my_videos.py through the real Stream-Downloader MCP. A download with a 'name' gets that exact file name; one without a name proves naming from the video title. Edit freely: add a video, a quality (best, 2160p ... 144p, audio) or a format (mp4, mkv, webm; mp3, m4a, flac, wav, opus, aac).",
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=vlm3xgiIZms",
+      "why": "The video Angela named - every video container plus MP3.",
+      "downloads": [
+        { "quality": "best", "format": "mp4", "name": "Tlamatini - free AI assistant (best).mp4" },
+        { "quality": "720p", "format": "mkv", "name": "Tlamatini - free AI assistant (720p).mkv" },
+        { "quality": "480p", "format": "webm", "name": "Tlamatini - free AI assistant (480p).webm" },
+        { "quality": "audio", "format": "mp3", "name": "Tlamatini - free AI assistant.mp3" }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=g2WNmGXMZbU",
+      "why": "A Spanish title with ñ and accents, named from the title itself.",
+      "downloads": [ { "quality": "1080p", "format": "mp4" } ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=WuuEGbCEAKA",
+      "why": "A nine-second clip whose title ends in !!! - AAC audio and a small video.",
+      "downloads": [
+        { "quality": "audio", "format": "m4a" },
+        { "quality": "360p", "format": "mp4", "name": "Tlamatini lets make some Magic (360p).mp4" }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=a51miZ1JIe0",
+      "why": "A URL inside the title (https://xaiht.org): Windows-safe naming from the title.",
+      "downloads": [ { "quality": "720p", "format": "mp4" } ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CkvDPSd_c-g",
+      "why": "Tlamatini's first introduction video - Opus audio.",
+      "downloads": [ { "quality": "audio", "format": "opus", "name": "Tlamatini's first introduction.opus" } ]
+    }
+  ]
+}
